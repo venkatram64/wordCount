@@ -1,0 +1,6 @@
+car bus jeep
+man car bus
+boy jeep man
+man boy jeep
+car bus bus
+boy boy man
