@@ -21,7 +21,7 @@ hdfs dfs -cat /welcome.txt
 hdfs dfs -help
 
 to see the created files  from namenode
-http://localhost:50075
+http://localhost:50070
 
 yarn web ui   http://localhost:8088
 
