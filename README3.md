@@ -21,9 +21,11 @@ hdfs dfs -cat /welcome.txt
 hdfs dfs -help
 
 to see the created files  from namenode
-localhost:50075
+http://localhost:50075
 
-yarn web ui   localhost:8088
+yarn web ui   http://localhost:8088
+
+web history server   http://localhost:19888/jobhistory
 
 go to edureka   www.edureka.co/blog/hadoop-tutorial
 
