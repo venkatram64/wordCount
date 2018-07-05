@@ -24,5 +24,16 @@ to see the created files  from namenode
 localhost:50075
 
 go to edureka   www.edureka.co/blog/hadoop-tutorial
+
+
 www.edureka.co/blog/hdfs-tutorial
+
+
 www.edureka.co/blog/apache-hadoop-hdfs-architecture
+
+
+hdfs dfs -put some.txt /user/xxx/hdfs_dir
+
+hdfs dfs -ls /user/xxx/hdfs_dir
+
+hadoop fsck /user/xxx/hdfs_dir
