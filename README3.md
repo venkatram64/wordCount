@@ -23,6 +23,8 @@ hdfs dfs -help
 to see the created files  from namenode
 localhost:50075
 
+yarn web ui   localhost:8088
+
 go to edureka   www.edureka.co/blog/hadoop-tutorial
 
 
