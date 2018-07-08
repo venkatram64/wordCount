@@ -1,0 +1,57 @@
+hive>show databases;
+
+hive>create database telecom;
+
+hive>describe database extended telecom;
+
+hive>use telecom;
+
+hive>create table recharge(cell_no int, city string, name string)
+	row format delimited fields terminated by ',';
+	
+hive>show tables;
+
+hive>LOAD DATA LOCAL INPATH 'home/cloudera/xxx/hive_demo/recharge.input' INTO TABLE recharge;
+
+hive>select * from recharge;
+hive>describe recharge;
+
+hive>describe extended recharge;
+
+hive>hadoop fs -ls /user/hive/warehouse/telecom.db
+
+hive>create external table recharge_external(cell_no int, city string, name string)
+	row format delimited fields terminated by ','
+	LOCATION '/xxx/hive_demo/';
+	
+hive>create table txnrecsByCat(txnno INT, txndate STRING, custno INT, amout DOUBLE,
+	product STRING, city STRING, state STRING, spendby STRINT)
+	partitione by (category STRING)
+	clustered by (state) INTO 10 buckets
+	row format delimited fields terminated by '.'
+	stored as textfile;
+	
+set hive.exec.dynamic.partition.mode=nonstrict;
+set hive.exec.dynamic.partition=true;
+set hive.enforce.bucketing=true;
+
+from txnrecords txn INSERT OVERWRITE TABLE txnrecsByCat PARTITION(category)
+txn.spendby, txn.category DISTRIBUTE BY category;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
