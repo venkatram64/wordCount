@@ -37,21 +37,3 @@ set hive.enforce.bucketing=true;
 
 from txnrecords txn INSERT OVERWRITE TABLE txnrecsByCat PARTITION(category)
 txn.spendby, txn.category DISTRIBUTE BY category;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
