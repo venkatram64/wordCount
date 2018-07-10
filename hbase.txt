@@ -1,0 +1,24 @@
+hbase>create 'htest','cf'
+hbase>put 'htest','r1','cf:c1','value'
+
+hbase>put 'htest','r1','cf:c2','value'
+hbase>put 'htest','r1','cf:c3','value'
+
+To get all ther versions
+hbase>get 'htest','r1',{COLUMN=>'cf:c3',VERSIONS=>3}
+
+hbase>put 'htest','r1','cf:c3','v3 updated'
+
+hbase>disable 'htest'
+
+hbase>alter 'htest',{NAME=>'cf_updated'}
+
+hbase>enable 'htest'
+
+hbase>describe 'htest'
+
+hbase>delete 'htest', 'r1','cf:c3'
+
+hbase>disable 'htest'
+
+hbase>drop 'htest'
